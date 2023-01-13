@@ -8,12 +8,12 @@ use elements::{
 };
 use rand::rngs::ThreadRng;
 use rand::Rng;
+use simplicity::ffi::c_jets::frame_ffi::c_writeBit;
+use simplicity::ffi::c_jets::round_u_word;
+use simplicity::ffi::{CElementsTxEnv, CFrameItem};
 use simplicity::jet::elements::{ElementsEnv, ElementsUtxo};
 use simplicity::jet::{Core, Elements, Jet, JetFailed};
 use simplicity::merkle::cmr::Cmr;
-use simplicity_sys::c_jets::frame_ffi::c_writeBit;
-use simplicity_sys::c_jets::round_u_word;
-use simplicity_sys::{CElementsTxEnv, CFrameItem};
 use std::sync::Arc;
 
 type JetBuffer = (Vec<usize>, *mut usize, *mut usize, *mut usize, *mut usize);
